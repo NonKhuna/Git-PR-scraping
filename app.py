@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
+import sys
 
 
 class PRObject() :
@@ -119,4 +120,4 @@ if __name__ == "__main__" :
     
     get_data(url_pr,  objects, number_of_pages)
     df = pd.DataFrame({'title': objects.titles, 'link': objects.links, 'isSuccess': objects.isSuccesses, 'descriptions': objects.descriptions, 'commits':objects.commits, 'link_issues': objects.link_issues})
-    df.to_csv("out2.csv")
+    df.to_csv("result.csv")
